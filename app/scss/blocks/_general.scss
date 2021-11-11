@@ -32,8 +32,6 @@ header {
   @include respond($laptop) {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-column-gap: 1em;
-    grid-row-gap: 1em;
   }
 }
 
@@ -48,9 +46,35 @@ header {
 
 .row {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-column-gap: 1em;
-  grid-row-gap: 1em;
+
+  &:not(.row-laptop) {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  &.row-laptop {
+    @include respond($mobile) {
+      grid-template-columns: repeat(12, 1fr);
+    }
+  }
+
+  &.row-gap {
+    grid-column-gap: 1em;
+  }
+
+  //grid-row-gap: 1em;
+}
+
+.heading {
+  font-weight: bold;
+  @include respond($laptop) {
+    font-size: 28px;
+  }
+  @include respond(0, $laptop) {
+    font-size: 20px;
+  }
+  color: $text-color;
+  line-height: 1.571;
+  margin: 0 0 15px 0;
 }
 
 h1 {
@@ -64,6 +88,29 @@ h1 {
   color: $text-color;
   line-height: 1.571;
   margin: 0 0 15px 0;
+}
+
+h2 {
+  font-weight: bold;
+  @include respond($laptop) {
+    font-size: 18px;
+  }
+  @include respond(0, $laptop) {
+    font-size: 16px;
+  }
+  color: $text-color;
+  line-height: 1.222;
+
+  @include respond($mobile) {
+    margin: 37px 0 22px 0;
+  }
+  @include respond(0, $mobile) {
+    margin: 24px 0 15px 0;
+  }
+}
+
+.asphalt {
+  background: $asphalt;
 }
 
 .page-content {
@@ -194,6 +241,11 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  transition: box-shadow 200ms ease-in-out;
+
+  &:hover {
+    box-shadow: 0 10px 30px 0 transparentize($navy, .5);
+  }
 }
 
 .app-inner {
@@ -263,6 +315,12 @@ footer {
     grid-column: span 12;
   }
 
+}
+
+.width-4-laptop {
+  @include respond($mobile) {
+    grid-column: span 4;
+  }
 }
 
 @include respond($laptop) {
@@ -390,5 +448,104 @@ ul.menu {
 
   &:hover {
     box-shadow: 0 10px 30px 0 rgba(0, 146, 69, 0.5);
+  }
+}
+
+.table-header {
+  color: $white;
+
+  @include respond(0, $mobile) {
+    display: none;
+  }
+
+  @include respond($mobile) {
+    min-height: 60px;
+  }
+
+  .table-cell {
+    background: $green;
+  }
+
+  .table-center-cell {
+    @include respond($mobile) {
+      border-left: 1px solid $table-gree-cell;
+      border-right: 1px solid $table-gree-cell;
+    }
+  }
+
+  .table-cell {
+    @include respond($mobile) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.table {
+  box-shadow: 0 0 19px 1px rgba(3, 14, 22, 0.1);
+  font-size: 13px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .table-cell:nth-child(2) {
+    @include respond($mobile) {
+      border-left: 1px solid $table-cell;
+      border-right: 1px solid $table-cell;
+      text-align: center;
+    }
+  }
+
+  .table-item {
+    background: $white;
+
+    @include respond(0, $mobile) {
+      padding: 10px 0;
+    }
+
+    .table-cell {
+      span {
+        @include respond($mobile) {
+          display: none;
+        }
+      }
+
+      @include respond($mobile) {
+        padding: 20px;
+      }
+      @include respond(0, $mobile) {
+        padding: 10px 20px;
+      }
+      color: $table-cell-color;
+    }
+
+    &:not(:last-child) {
+      border-bottom: 1px solid $table-cell;
+    }
+  }
+}
+
+.base-button {
+  min-height: 40px;
+  font-weight: bold;
+  padding: 8px 30px;
+  background: $green;
+  display: inline-flex;
+  font-size: 13px;
+  border-radius: 3px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: $white;
+  transition: box-shadow 200ms ease-in-out;
+
+  &:hover {
+    box-shadow: 0 10px 30px 0 rgba(0, 146, 69, 0.5);
+  }
+}
+
+.hide-on-mobile {
+  @include respond(0, $mobile) {
+    display: none;
   }
 }

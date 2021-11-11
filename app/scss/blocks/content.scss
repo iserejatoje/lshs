@@ -22,7 +22,7 @@
   }
 
   .legend {
-    background: $legend;
+    background: $asphalt;
     border-radius: 10px;
 
     @include respond($laptop) {
@@ -46,7 +46,7 @@
     .legend-item {
       display: flex;
       align-items: center;
-      color: $legend-color;
+      color: $gray;
       font-size: 11px;
     }
 
