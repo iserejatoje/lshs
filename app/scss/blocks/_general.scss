@@ -1,0 +1,394 @@
+.container {
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.header-inner {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.app-inner {
+  padding-top: 60px;
+}
+
+header {
+  background: $white;
+  box-shadow: 0 3px 15px 0 rgba(0, 32, 41, 0.1);
+  height: 60px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+.row-laptop {
+  @include respond($laptop) {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+  }
+}
+
+.row-mobile {
+  @include respond($mobile) {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 1em;
+    grid-row-gap: 1em;
+  }
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+}
+
+h1 {
+  font-weight: bold;
+  @include respond($laptop) {
+    font-size: 28px;
+  }
+  @include respond(0, $laptop) {
+    font-size: 20px;
+  }
+  color: $text-color;
+  line-height: 1.571;
+  margin: 0 0 15px 0;
+}
+
+.page-content {
+  @include respond($laptop) {
+    padding-top: 65px;
+    padding-bottom: 65px;
+  }
+  @include respond(0, $laptop) {
+    padding-top: 20px;
+    padding-bottom: 35px;
+  }
+}
+
+.footer-inner {
+  @include respond(0, $mobile) {
+    text-align: center;
+
+    .align-end-mobile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  img {
+    height: auto;
+  }
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+
+  @include respond($mobile) {
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+
+  @include respond(0, $mobile) {
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+
+  a {
+    font-size: 16px;
+    color: $text-color;
+    text-decoration: none;
+    transition: color 200ms ease-in-out;
+
+    @include respond(0, $mobile) {
+      &:not(:last-child) {
+        margin-bottom: 4px;
+      }
+    }
+
+    &:hover {
+      color: $green;
+    }
+  }
+}
+
+footer {
+  background: $white;
+  flex: 0 0 auto;
+
+  @include respond(0, $mobile) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  @include respond($mobile) {
+    padding-top: 74px;
+    padding-bottom: 74px;
+  }
+
+  @include respond($mobile, $laptop) {
+    .width-3 {
+      grid-column: span 3;
+    }
+  }
+
+  .phone,
+  .email {
+    font-size: 14px;
+    text-decoration: none;
+    color: $navy;
+  }
+
+  .address {
+    font-size: 14px;
+    @include respond(0, $mobile) {
+      margin: 20px 0 15px 0;
+    }
+    @include respond($mobile) {
+      margin: 20px 0 30px 0;
+      max-width: 280px;
+      text-align: right;
+    }
+  }
+
+  .title {
+    font-size: 19px;
+    font-weight: 700;
+  }
+
+  .logo-link {
+    display: block;
+
+    @include respond($mobile) {
+      margin-bottom: 20px;
+    }
+    @include respond(0, $mobile) {
+      margin-top: 35px;
+      margin-bottom: 35px;
+    }
+  }
+}
+
+.account-personal {
+  background: $navy;
+  max-width: 138px;
+  width: 100%;
+  color: $white;
+  height: 32px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-inner {
+  flex: 1 0 auto;
+}
+
+.button {
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.fs-13 {
+  font-size: 13px;
+  color: rgba(127, 125, 142, 0.929);
+  line-height: 1.7;
+}
+
+.fs-14 {
+  font-size: 13px;
+  color: rgba(127, 125, 142, 0.929);
+  line-height: 1.7;
+}
+
+.align-end {
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.align-end-laptop {
+  @include respond($laptop) {
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+}
+
+.align-end-mobile {
+  @include respond($mobile) {
+    flex-direction: column;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+}
+
+.navy {
+  color: $navy;
+}
+
+@include respond(0, $laptop) {
+  .width-7 {
+    grid-column: span 12;
+  }
+
+  .width-5 {
+    grid-column: span 12;
+  }
+
+}
+
+@include respond($laptop) {
+  .width-1 {
+    grid-column: span 1;
+  }
+
+  .width-2 {
+    grid-column: span 2;
+  }
+
+  .width-3 {
+    grid-column: span 3;
+  }
+
+  .width-4 {
+    grid-column: span 4;
+  }
+
+  .width-6 {
+    grid-column: span 6;
+  }
+
+  .width-5 {
+    grid-column: span 5;
+  }
+
+  .width-7 {
+    grid-column: span 7;
+  }
+
+  .width-8 {
+    grid-column: span 8;
+  }
+
+  .width-12 {
+    grid-column: span 12;
+  }
+}
+
+ul.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  @include respond(0, $mobile) {
+    display: none;
+  }
+
+  @include respond($laptop) {
+    transform: translateX(-58px);
+  }
+
+  li {
+    &:not(:last-child) {
+      margin-right: 22px;
+    }
+  }
+
+  svg {
+    margin-left: 5px;
+    transition: fill 200ms ease-in-out;
+  }
+
+  a {
+    font-size: 14px;
+    text-decoration: none;
+    font-family: myriad, sans-serif;
+    color: $text-color;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    letter-spacing: .8px;
+    transition: color 200ms ease-in-out;
+
+    &:hover {
+      color: $green;
+
+      svg {
+        fill: $green;
+      }
+    }
+  }
+}
+
+.burger {
+  width: 25px;
+  margin-left: 25px;
+
+  @include respond($mobile) {
+    display: none;
+  }
+
+  .burger-line {
+    background: $text-color;
+    height: 1px;
+    width: 100%;
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 7px;
+    }
+  }
+}
+
+.account-logout {
+  @include respond(0, $mobile) {
+    display: none;
+  }
+  font-family: myriad, sans-serif;
+  background: $green;
+  color: $white;
+  max-width: 83px;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  font-size: 14px;
+  border-radius: 3px;
+  line-height: 1;
+  transition: box-shadow 200ms ease-in-out;
+
+  &:hover {
+    box-shadow: 0 10px 30px 0 rgba(0, 146, 69, 0.5);
+  }
+}
