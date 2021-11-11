@@ -20,6 +20,15 @@
   }
 
   .table {
+
+    .table-cell:nth-child(2) {
+      @include respond($mobile) {
+        border-left: 1px solid $table-cell;
+        border-right: 1px solid $table-cell;
+        text-align: center;
+      }
+    }
+
     @include respond(0, $mobile) {
       margin-bottom: 30px;
       margin-top: 20px;

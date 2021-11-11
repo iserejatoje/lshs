@@ -44,15 +44,28 @@ header {
   }
 }
 
+.row-fluid {
+
+  @include respond($mobile) {
+    display: flex;
+    justify-content: space-between;
+
+    .table-cell {
+      width: calc(100% / 8);
+    }
+  }
+}
+
 .row {
-  display: grid;
 
   &:not(.row-laptop) {
+    display: grid;
     grid-template-columns: repeat(12, 1fr);
   }
 
   &.row-laptop {
     @include respond($mobile) {
+      display: grid;
       grid-template-columns: repeat(12, 1fr);
     }
   }
@@ -61,7 +74,6 @@ header {
     grid-column-gap: 1em;
   }
 
-  //grid-row-gap: 1em;
 }
 
 .heading {
@@ -463,17 +475,6 @@ ul.menu {
   }
 
   .table-cell {
-    background: $green;
-  }
-
-  .table-center-cell {
-    @include respond($mobile) {
-      border-left: 1px solid $table-gree-cell;
-      border-right: 1px solid $table-gree-cell;
-    }
-  }
-
-  .table-cell {
     @include respond($mobile) {
       display: flex;
       align-items: center;
@@ -488,11 +489,30 @@ ul.menu {
   border-radius: 10px;
   overflow: hidden;
 
-  .table-cell:nth-child(2) {
-    @include respond($mobile) {
-      border-left: 1px solid $table-cell;
-      border-right: 1px solid $table-cell;
-      text-align: center;
+  &.table-green {
+    .table-header .table-cell {
+      background: $green;
+    }
+
+    .table-header .table-center-cell {
+      @include respond($mobile) {
+        border-left: 1px solid $table-green-cell;
+        border-right: 1px solid $table-green-cell;
+      }
+    }
+  }
+
+  &.table-navy {
+    .table-header .table-cell {
+      background: $navy;
+    }
+
+    .table-header .table-cell {
+      @include respond($mobile) {
+        &:not(:last-child) {
+          border-right: 1px solid $table-navy-cell;
+        }
+      }
     }
   }
 
@@ -514,7 +534,7 @@ ul.menu {
         padding: 15px 20px;
       }
       @include respond(0, $mobile) {
-        padding: 10px 20px;
+        padding: 6px 20px;
       }
       color: $table-cell-color;
     }

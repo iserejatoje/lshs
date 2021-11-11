@@ -1,0 +1,174 @@
+.personal-page {
+  .table-cell {
+    @include respond($mobile) {
+      text-align: center;
+    }
+
+    span {
+      color: $navy;
+    }
+  }
+
+  .table-history {
+    @include respond($mobile) {
+      margin-top: 40px;
+    }
+    @include respond(0, $mobile) {
+      margin-top: 20px;
+    }
+  }
+
+  .table-header {
+    .table-cell {
+      @include respond($mobile) {
+        padding: 0 10px;
+      }
+      min-height: 80px;
+    }
+  }
+
+  .table-item {
+    .table-cell {
+
+      @include respond(0, $mobile) {
+        display: flex;
+        flex-direction: column;
+      }
+      @include respond($mobile) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 70px;
+
+        &:not(:last-child) {
+          border-right: 1px solid $table-cell;
+        }
+      }
+    }
+  }
+
+  .personal-info_block:last-child {
+    .personal-row {
+      @include respond(0, $mobile) {
+        padding-bottom: 10px;
+
+        &:not(:last-child) {
+          margin-bottom: 10px;
+          border-bottom: 1px solid $table-cell;
+        }
+      }
+    }
+  }
+
+  .personal-info_block:first-child {
+    .personal-row {
+      @include respond(0, $mobile) {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid $table-cell;
+      }
+    }
+  }
+
+  .personal-row {
+    @include respond(0, $mobile) {
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+        border-bottom: 1px solid $table-cell;
+      }
+    }
+    @include respond($mobile) {
+      display: flex;
+    }
+
+    &:nth-child(even) {
+      .personal-column:last-child {
+        @include respond($mobile) {
+          background: $table-silver;
+        }
+      }
+    }
+
+    .personal-column:last-child {
+      color: $table-cell-color;
+    }
+
+    &:not(:last-child) {
+      .personal-column:first-child {
+        border-bottom: 1px solid $white;
+      }
+
+      .personal-column:last-child {
+        @include respond($mobile) {
+          border-bottom: 1px solid $table-cell;
+        }
+      }
+    }
+
+    .personal-column:first-child {
+      @include respond(0, $mobile) {
+        color: $navy;
+      }
+      @include respond($mobile) {
+        background: $navy;
+        color: $white;
+      }
+    }
+
+    &:not(.personal-row-2) {
+      .personal-column {
+        @include respond($mobile) {
+          min-height: 51px;
+        }
+      }
+    }
+
+    &.personal-row-2 {
+      .personal-column {
+        @include respond($mobile) {
+          min-height: 102px;
+        }
+      }
+    }
+  }
+
+  .personal-column {
+    @include respond(0, $mobile) {
+      padding: 0 20px;
+    }
+    @include respond($mobile) {
+      flex: 1;
+      padding: 6px 20px;
+    }
+    display: flex;
+    align-items: center;
+  }
+
+  .personal-info {
+    @include respond(0, $mobile) {
+      margin-top: 20px;
+      margin-bottom: 35px;
+    }
+    @include respond($mobile) {
+      margin-top: 40px;
+      margin-bottom: 62px;
+    }
+    font-size: 13px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 19px 1px rgba(3, 14, 22, 0.1);
+
+    @include respond(0, $mobile) {
+      padding: 10px 0;
+    }
+    @include respond($mobile) {
+      display: flex;
+
+      .personal-info_block {
+        width: 50%;
+      }
+    }
+
+  }
+}

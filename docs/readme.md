@@ -4,3 +4,4 @@ _Вёрстка страниц нового личного кабинета ЛШ
 
 - [Содержание](https://iserejatoje.github.io/lshs/content.html)
 - [Экзамен](https://iserejatoje.github.io/lshs/exam.html)
+- [Личная информация](https://iserejatoje.github.io/lshs/personal.html)
