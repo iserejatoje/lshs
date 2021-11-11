@@ -511,7 +511,7 @@ ul.menu {
       }
 
       @include respond($mobile) {
-        padding: 20px;
+        padding: 15px 20px;
       }
       @include respond(0, $mobile) {
         padding: 10px 20px;
