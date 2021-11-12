@@ -1,11 +1,11 @@
 .wrapper {
-  max-width: 616px;
+  max-width: 777px;
   margin: 0 auto;
   text-align: center;
   padding-top: 30px;
 }
 
-.faq-content {
+.first-screen-content {
   .row-fluid {
     @include respond($mobile) {
       display: flex;
@@ -29,7 +29,11 @@
 
 }
 
-.faq-form {
+.feedback-form {
+  max-width: 616px;
+  margin-left: auto;
+  margin-right: auto;
+
   @include respond($mobile) {
     margin-top: 52px;
   }

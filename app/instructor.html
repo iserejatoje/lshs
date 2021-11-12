@@ -1,60 +1,23 @@
-
-<!doctype html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Вопросы и заявки &mdash; ЛШС</title>
-    <link rel="stylesheet" href="css/app.min.css">
-</head>
-<body>
-
-<div id="app">
-    <div class="app-inner">
-        <header>
-            <div class="container">
-                <div class="header-inner">
-                    <a href="" class="logo-link">
-                        <img width="200" src="images/logo.png" alt="">
-                    </a>
-
-                    <ul class="menu">
-                        <li><a href="">Обучение <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="6px" height="6px">
-                            <path fill-rule="evenodd" d="M3.235,5.959 L0.203,0.834 L6.266,0.834 L3.235,5.959 Z"/>
-                        </svg></a></li>
-                        <li><a href="">Заявки/вопросы</a></li>
-                        <li><a href="">Личная информация</a></li>
-                    </ul>
-
-                    <a href="" class="account-link account-logout">Выход</a>
-                    <button class="button burger">
-                        <span class="burger-line"></span>
-                        <span class="burger-line"></span>
-                        <span class="burger-line"></span>
-                    </button>
-                </div>
-            </div>
-        </header>
+<!--#set var="title" value="Инструктор" -->
+<!--#include virtual="/parts/header.html" -->
 
 <div class="first-screen-content">
     <div class="faq-picture-wrapper picture-wrapper">
-        <img class="page-picture" src="images/faq-bg.jpg" alt="">
+        <img class="page-picture" src="images/instructor-bg.jpg" alt="">
 
         <div class="container">
             <div class="flex-center-block">
-                <div class="fs-32">Оставьте свои вопросы/пожелания</div>
+                <div class="fs-32">Инструктор</div>
                 <div class="wrapper">
                     <div class="fs-15">
-                        Касающиеся организации обучения  для вас или вашей компании
-                        в форме ниже. Университет Лин Шесть Сигм заинтересован ответить на ваши
-                        вопросы, дать необходимую cправочную информацию  и максимально
-                        удовлетворить ваши потребности в обучении и сертификации.
+                        В данном разделе вы можете задать вопрос вашему личному инструктору. Ответ будет
+                        дан в течении 24 часов, за исключением выходных и праздничных дней. Инструктор даст пояснения
+                        к обучающим теоритическим материалам, практические рекомендации по реализации проектов
+                        Лин Шесть Сигм, ответит на любые вопросы, связанные с обучением и сертификацией.
                     </div>
 
                     <form action="" class="form feedback-form" autocomplete="off" enctype="multipart/form-data">
-                        <input type="hidden" name="action" value="faq">
+                        <input type="hidden" name="action" value="instructor">
 
                         <label class="fs-15" for="subject">Введите тему вопроса <span>(ограничение 50 символов)</span></label>
                         <input maxlength="50" type="text" name="subject" id="subject">
@@ -117,49 +80,4 @@
 </div>
 
 
-    </div>
-    <footer>
-        <div class="container">
-            <div class="footer-inner">
-                <div class="row-mobile">
-                    <div class="width-3">
-                        <div class="title">О нас</div>
-
-                        <div class="footer-nav">
-                            <a href="">О методологии</a>
-                            <a href="">Об университете</a>
-                            <a href="">Консультанты</a>
-                            <a href="">История</a>
-                        </div>
-                    </div>
-                    <div class="width-3">
-                        <div class="title">Услуги</div>
-                        <div class="footer-nav">
-                            <a href="">Обучение</a>
-                        </div>
-                    </div>
-                    <div class="width-3">
-                        <div class="title">Другие разделы</div>
-                        <div class="footer-nav">
-                            <a href="">Материалы</a>
-                            <a href="">Результат</a>
-                            <a href="">Контакты</a>
-                        </div>
-                    </div>
-                    <div class="width-3 align-end-mobile">
-                        <a href="#" class="logo-link"><img width="280" height="41" src="images/logo.png" alt=""></a>
-                        <a href="#" class="account-link account-personal">Личный кабинет</a>
-
-                        <div class="fs-14 address">
-                            г. Москва, Астрадамский проезд, дом 4А, корпус 2
-                        </div>
-
-                        <a href="tel:7 (499) 391-15-10" class="phone">+7 (499) 391-15-10</a>
-                        <a href="mailto:info@univerlss.ru" class="email">info@univerlss.ru</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-</div>
-<script src="js/app.min.js"></script>
+<!--#include virtual="/parts/footer.html" -->

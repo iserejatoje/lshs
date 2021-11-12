@@ -7,3 +7,4 @@ _Вёрстка страниц нового личного кабинета ЛШ
 - [Личная информация](https://iserejatoje.github.io/lshs/personal.html)
 - [Сертификация](https://iserejatoje.github.io/lshs/certification.html)
 - [Вопросы и заявки](https://iserejatoje.github.io/lshs/faq.html)
+- [Инструктор](https://iserejatoje.github.io/lshs/instructor.html)
