@@ -31,7 +31,7 @@
 
     &.legend-margin {
       @include respond($laptop) {
-        margin-top: 50px;
+        margin-top: auto;
       }
       @include respond(0, $laptop) {
         margin-top: 15px;
