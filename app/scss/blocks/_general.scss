@@ -360,9 +360,34 @@ footer {
 
 }
 
+.reverse-column-mobile {
+  @include respond(0, $mobile) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
 .width-4-laptop {
   @include respond($mobile) {
     grid-column: span 4;
+  }
+}
+
+.width-5-laptop {
+  @include respond($mobile) {
+    grid-column: span 5;
+  }
+}
+
+.width-8-laptop {
+  @include respond($mobile) {
+    grid-column: span 8;
+  }
+}
+
+.width-7-laptop {
+  @include respond($mobile) {
+    grid-column: span 7;
   }
 }
 
