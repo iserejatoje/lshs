@@ -25,7 +25,7 @@ header {
   left: 0;
   right: 0;
   top: 0;
-  z-index: 1;
+  z-index: 2;
 }
 
 .row-laptop {
@@ -41,18 +41,6 @@ header {
     grid-template-columns: repeat(12, 1fr);
     grid-column-gap: 1em;
     grid-row-gap: 1em;
-  }
-}
-
-.row-fluid {
-
-  @include respond($mobile) {
-    display: flex;
-    justify-content: space-between;
-
-    .table-cell {
-      width: calc(100% / 8);
-    }
   }
 }
 
@@ -241,6 +229,27 @@ footer {
   }
 }
 
+.blue-button {
+  background: $navy;
+  width: 100%;
+  color: $white;
+  height: 40px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 13px;
+  display: flex;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 200ms ease-in-out;
+
+  &:hover {
+    box-shadow: 0 10px 30px 0 transparentize($navy, .5);
+  }
+}
+
 .account-personal {
   background: $navy;
   max-width: 138px;
@@ -275,6 +284,28 @@ footer {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.fs-32 {
+  @include respond($mobile) {
+    font-size: 32px;
+    line-height: 0.9;
+  }
+  @include respond(0, $mobile) {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  font-weight: bold;
+}
+
+.fs-15 {
+  font-size: 15px;
+  line-height: 1.667;
+  color: $white;
 }
 
 .fs-13 {
@@ -463,6 +494,52 @@ ul.menu {
   }
 }
 
+.flex-center-block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  height: 100%;
+  flex: 1;
+  flex-direction: column;
+}
+
+.picture-wrapper {
+  position: relative;
+  padding: 30px 0;
+  overflow: hidden;
+  min-height: 717px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  @include respond(0, $mobile) {
+    background: $text-color;
+  }
+
+  .container {
+    height: 100%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page-picture {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+
+    @include respond(0, $mobile) {
+      display: none;
+    }
+  }
+}
 
 .certification-page {
   @include respond($laptop) {
@@ -558,6 +635,12 @@ ul.menu {
 
   .table-item {
     background: $white;
+
+    @include respond($mobile) {
+      &:nth-child(odd) {
+        background: $table-silver;
+      }
+    }
 
     @include respond(0, $mobile) {
       padding: 10px 0;

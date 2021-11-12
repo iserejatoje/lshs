@@ -1,0 +1,165 @@
+
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Вопросы и заявки &mdash; ЛШС</title>
+    <link rel="stylesheet" href="css/app.min.css">
+</head>
+<body>
+
+<div id="app">
+    <div class="app-inner">
+        <header>
+            <div class="container">
+                <div class="header-inner">
+                    <a href="" class="logo-link">
+                        <img width="200" src="images/logo.png" alt="">
+                    </a>
+
+                    <ul class="menu">
+                        <li><a href="">Обучение <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="6px" height="6px">
+                            <path fill-rule="evenodd" d="M3.235,5.959 L0.203,0.834 L6.266,0.834 L3.235,5.959 Z"/>
+                        </svg></a></li>
+                        <li><a href="">Заявки/вопросы</a></li>
+                        <li><a href="">Личная информация</a></li>
+                    </ul>
+
+                    <a href="" class="account-link account-logout">Выход</a>
+                    <button class="button burger">
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                        <span class="burger-line"></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+<div class="faq-content">
+    <div class="faq-picture-wrapper picture-wrapper">
+        <img class="page-picture" src="images/faq-bg.jpg" alt="">
+
+        <div class="container">
+            <div class="flex-center-block">
+                <div class="fs-32">Оставьте свои вопросы/пожелания</div>
+                <div class="wrapper">
+                    <div class="fs-15">
+                        Касающиеся организации обучения  для вас или вашей компании
+                        в форме ниже. Университет Лин Шесть Сигм заинтересован ответить на ваши
+                        вопросы, дать необходимую cправочную информацию  и максимально
+                        удовлетворить ваши потребности в обучении и сертификации.
+                    </div>
+
+                    <form action="" class="form faq-form" autocomplete="off" enctype="multipart/form-data">
+                        <input type="hidden" name="action" value="faq">
+
+                        <label class="fs-15" for="subject">Введите тему вопроса <span>(ограничение 50 символов)</span></label>
+                        <input maxlength="50" type="text" name="subject" id="subject">
+                        <label class="fs-15" for="message">Введите вопрос <span>(ограничение 200 символов)</span></label>
+                        <div class="textarea-wrapper">
+                            <div class="icon">
+                                <svg fill="#93909f" width="24" height="12" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 693.15 351.27"><path d="M527.87,96a23.41,23.41,0,0,0-14.69-6.71V89l-260.94-.44c-29.62,0-50.14,8.37-70.84,28.91-16.13,16.13-24.68,36.6-24.08,57.64.62,21.72,10.57,42.81,28.76,61l.38.38a98.94,98.94,0,0,0,70.84,28.92l303.27,0c76.82,0,132.58-53.75,132.58-127.79A137.76,137.76,0,0,0,555.49,0L175.64,0C78.8,0,0,78.8,0,175.64A175.87,175.87,0,0,0,175.64,351.27l394-.69a24,24,0,0,0,15.78-7.11,23.5,23.5,0,0,0-15.78-40.16v-.1l-394,.69A128.43,128.43,0,0,1,47.37,175.64c0-70.74,57.55-128.28,128.27-128.27l379.85,0a90.43,90.43,0,0,1,90.29,90.29c0,24-8.24,44.33-23.81,58.74-15.33,14.17-36.56,21.67-61.4,21.67l-303.9,0a51.86,51.86,0,0,1-36.83-15.16c-18.66-18.67-16.66-40.19-5.06-51.79A52,52,0,0,1,251.6,136l261.58.45v-.3a23.33,23.33,0,0,0,14.69-6.71A23.58,23.58,0,0,0,527.87,96Z"/></svg>
+                            </div>
+                            <textarea maxlength="200" name="message" id="message"></textarea>
+                        </div>
+                        <button type="submit" class="blue-button">Отправить</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq-history">
+        <div class="fs-32 text-center">История вопросов и ответов</div>
+
+        <div class="container">
+            <div class="table faq-history-table table-navy">
+                <div class="row-fluid hide-on-mobile table-header">
+                    <div class="table-cell">№</div>
+                    <div class="table-cell">Дата</div>
+                    <div class="table-cell">Вопрос</div>
+                    <div class="table-cell">Ответ</div>
+                </div>
+                <div class="row-fluid table-item">
+                    <div class="table-cell"><span>№: </span> <em>1</em></div>
+                    <div class="table-cell"><span>Дата: </span>10 августа 2021</div>
+                    <div class="table-cell"><span>Вопрос: </span>Внедрение современных методик влечет за собой
+                        процесс внедрения и модернизации инновационных
+                        методов управления процессами
+                    </div>
+                    <div class="table-cell"><span>Ответ: </span>Высокий уровень вовлечения представителей
+                        целевой аудитории является четким доказательством
+                        простого факта: перспективное планирование требует
+                        определения и уточнения анализа существующих
+                        паттернов поведения.
+                    </div>
+                </div>
+                <div class="row-fluid table-item">
+                    <div class="table-cell"><span>№: </span><em>2</em></div>
+                    <div class="table-cell"><span>Дата: </span>10 августа 2021</div>
+                    <div class="table-cell"><span>Вопрос: </span>Внедрение современных методик влечет за собой
+                        процесс внедрения и модернизации инновационных
+                        методов управления процессами
+                    </div>
+                    <div class="table-cell"><span>Ответ: </span>Высокий уровень вовлечения представителей
+                        целевой аудитории является четким доказательством
+                        простого факта: перспективное планирование требует
+                        определения и уточнения анализа существующих
+                        паттернов поведения.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <div class="row-mobile">
+                    <div class="width-3">
+                        <div class="title">О нас</div>
+
+                        <div class="footer-nav">
+                            <a href="">О методологии</a>
+                            <a href="">Об университете</a>
+                            <a href="">Консультанты</a>
+                            <a href="">История</a>
+                        </div>
+                    </div>
+                    <div class="width-3">
+                        <div class="title">Услуги</div>
+                        <div class="footer-nav">
+                            <a href="">Обучение</a>
+                        </div>
+                    </div>
+                    <div class="width-3">
+                        <div class="title">Другие разделы</div>
+                        <div class="footer-nav">
+                            <a href="">Материалы</a>
+                            <a href="">Результат</a>
+                            <a href="">Контакты</a>
+                        </div>
+                    </div>
+                    <div class="width-3 align-end-mobile">
+                        <a href="#" class="logo-link"><img width="280" height="41" src="images/logo.png" alt=""></a>
+                        <a href="#" class="account-link account-personal">Личный кабинет</a>
+
+                        <div class="fs-14 address">
+                            г. Москва, Астрадамский проезд, дом 4А, корпус 2
+                        </div>
+
+                        <a href="tel:7 (499) 391-15-10" class="phone">+7 (499) 391-15-10</a>
+                        <a href="mailto:info@univerlss.ru" class="email">info@univerlss.ru</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="js/app.min.js"></script>

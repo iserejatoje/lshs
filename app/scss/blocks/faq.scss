@@ -1,0 +1,157 @@
+.wrapper {
+  max-width: 616px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.faq-content {
+  .row-fluid {
+    @include respond($mobile) {
+      display: flex;
+
+      .table-cell:nth-child(1) {
+        width: 60px;
+      }
+
+      .table-cell:nth-child(3),
+      .table-cell:nth-child(4) {
+        flex: 1;
+      }
+
+      .table-cell:nth-child(2) {
+        max-width: 180px;
+        width: 100%;
+      }
+
+    }
+  }
+
+}
+
+.faq-form {
+  @include respond($mobile) {
+    margin-top: 52px;
+  }
+  @include respond(0, $mobile) {
+    margin-top: 30px;
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .textarea-wrapper {
+    width: 100%;
+    margin-bottom: 12px;
+    position: relative;
+  }
+
+  .icon {
+    position: absolute;
+    right: 12px;
+    top: 10px;
+  }
+
+  label {
+    margin-bottom: 14px;
+
+    span {
+      color: transparentize($white, .7);
+    }
+  }
+
+  input,
+  textarea {
+    border-radius: 3px;
+    outline: none;
+    padding: 10px;
+    font-size: 15px;
+    border: none;
+  }
+
+  input {
+    height: 40px;
+    margin-bottom: 22px;
+  }
+
+  textarea {
+    height: 120px;
+    border-radius: 3px;
+    padding-right: 50px;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+  }
+}
+
+.faq-picture-wrapper {
+  .fs-32 {
+    color: $white;
+    text-align: center;
+  }
+}
+
+.faq-history-table {
+
+  @include respond($mobile) {
+    margin-top: 50px;
+  }
+  @include respond(0, $mobile) {
+    margin-top: 20px;
+  }
+
+  .table-item {
+
+    .table-cell:not(:last-child) {
+      @include respond($mobile) {
+        border-right: 1px solid $table-cell;
+      }
+    }
+
+    span {
+      color: $navy;
+    }
+
+    em {
+      font-style: normal;
+
+      @include respond(0, $mobile) {
+        background: $navy;
+        color: $white;
+        border-radius: 20px;
+        padding: 3px 12px;
+      }
+    }
+
+    .table-cell:nth-child(3),
+    .table-cell:nth-child(4) {
+      @include respond($mobile) {
+        padding-right: 42px;
+      }
+    }
+
+    .table-cell {
+      line-height: 1.8;
+    }
+
+    .table-cell:nth-child(2) {
+      @include respond($mobile) {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.faq-history {
+  @include respond($mobile) {
+    padding: 92px 0 65px 0;
+  }
+  @include respond(0, $mobile) {
+    padding: 30px 0 40px 0;
+  }
+}

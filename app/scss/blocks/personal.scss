@@ -1,4 +1,16 @@
 .personal-page {
+
+  .row-fluid {
+    @include respond($mobile) {
+      display: flex;
+      justify-content: space-between;
+
+      .table-cell {
+        width: calc(100% / 8);
+      }
+    }
+  }
+
   .table-cell {
     @include respond($mobile) {
       text-align: center;
