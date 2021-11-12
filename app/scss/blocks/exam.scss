@@ -1,23 +1,4 @@
 .exam-page {
-  .exam-content {
-    font-size: 13px;
-    line-height: 1.7;
-    color: $gray;
-    padding-top: 6px;
-    max-width: 920px;
-
-    @include respond($mobile) {
-      padding-bottom: 54px;
-    }
-
-    @include respond(0, $mobile) {
-      padding-bottom: 20px;
-    }
-
-    p {
-      margin: 0 0 20px 0;
-    }
-  }
 
   .table {
 

@@ -463,6 +463,46 @@ ul.menu {
   }
 }
 
+
+.certification-page {
+  @include respond($laptop) {
+    padding-top: 65px;
+  }
+  @include respond(0, $laptop) {
+    padding-top: 20px;
+  }
+}
+
+.text-content {
+  font-size: 13px;
+  line-height: 1.7;
+  color: $gray;
+  padding-top: 6px;
+  max-width: 888px;
+
+  a {
+    text-decoration: none;
+    color: $navy;
+    transition: color 200ms ease-in-out;
+
+    &:hover {
+      color: $green;
+    }
+  }
+
+  @include respond($mobile) {
+    padding-bottom: 54px;
+  }
+
+  @include respond(0, $mobile) {
+    padding-bottom: 20px;
+  }
+
+  p {
+    margin: 0 0 20px 0;
+  }
+}
+
 .table-header {
   color: $white;
 
