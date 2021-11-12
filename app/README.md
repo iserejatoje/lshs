@@ -9,3 +9,4 @@ _Вёрстка страниц нового личного кабинета ЛШ
 - [Вопросы и заявки](https://iserejatoje.github.io/lshs/faq.html)
 - [Инструктор](https://iserejatoje.github.io/lshs/instructor.html)
 - [Обучающий материал](https://iserejatoje.github.io/lshs/teaching-material.html)
+- [Обучение](https://iserejatoje.github.io/lshs/education.html)

@@ -66,10 +66,10 @@ header {
 
 .heading {
   font-weight: bold;
-  @include respond($laptop) {
+  @include respond($mobile) {
     font-size: 28px;
   }
-  @include respond(0, $laptop) {
+  @include respond(0, $mobile) {
     font-size: 20px;
   }
   color: $text-color;
@@ -114,11 +114,11 @@ h2 {
 }
 
 .page-content {
-  @include respond($laptop) {
+  @include respond($mobile) {
     padding-top: 65px;
     padding-bottom: 65px;
   }
-  @include respond(0, $laptop) {
+  @include respond(0, $mobile) {
     padding-top: 20px;
     padding-bottom: 35px;
   }
@@ -716,12 +716,18 @@ ul.menu {
         }
       }
 
+      &.table-cell-train {
+        display: flex;
+        align-items: stretch !important;
+      }
+
       @include respond($mobile) {
         padding: 15px 20px;
       }
       @include respond(0, $mobile) {
         padding: 6px 20px;
       }
+
       color: $table-cell-color;
     }
 
