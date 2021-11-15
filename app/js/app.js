@@ -7,6 +7,15 @@ phoneMask.forEach(element => IMask(element, {
 }))
 
 $(function () {
+    $('.burger').click(function () {
+        $('body').addClass('menu-opened')
+    })
+    $('.popup-menu .baloon-link a').click(function () {
+        $(this).next().toggle()
+    })
+    $('.close-menu').click(function () {
+        $('body').removeClass('menu-opened')
+    })
     $('.accordion-toggle').click(function () {
         let $this = $(this)
         $this.parent().toggleClass('opened')

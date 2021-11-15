@@ -421,6 +421,139 @@ footer {
   }
 }
 
+.menu-opened {
+  overflow: hidden;
+
+  .popup-menu {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+
+  .address {
+    margin-bottom: 20px;
+  }
+}
+
+.close-menu {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+
+  svg {
+    display: block;
+  }
+}
+
+.popup-menu {
+  .baloon-link {
+    text-align: center;
+  }
+  .baloon {
+    margin: 15px 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    a {
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+header {
+  .baloon {
+    position: absolute;
+    background: $white;
+    z-index: 2;
+    flex-direction: column;
+    padding: 15px;
+    display: none;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 0 rgba(0, 32, 41, 0.25);
+    max-width: 150px;
+    top: 57px;
+    transform: translateX(-29px);
+  }
+}
+
+header {
+  .baloon-link:hover .baloon {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.baloon:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -38px;
+  display: block;
+  height: 40px;
+}
+
+.baloon a {
+  margin-bottom: 2px;
+}
+
+.baloon:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  z-index: 1;
+  border-style: solid;
+  border-color: #fff transparent;
+  border-width: 0 10px 10px;
+  top: -10px;
+  left: 50%;
+  margin-left: -10px;
+}
+
+.popup-menu {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding: 50px 20px 20px;
+  bottom: 0;
+  background: $white;
+  z-index: 1000;
+  display: none;
+
+  .account-logout {
+    color: $white;
+    margin-top: 16px;
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 16px;
+    color: $black;
+  }
+
+  .logo-link {
+    margin: 0 auto;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 35px;
+  }
+}
+
 .width-8-laptop {
   @include respond($mobile) {
     grid-column: span 8;
@@ -477,24 +610,40 @@ footer {
   }
 }
 
-ul.menu {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-
+header {
   @include respond(0, $mobile) {
-    display: none;
+    ul.menu {
+      display: none;
+    }
   }
 
-  @include respond($laptop) {
-    transform: translateX(-58px);
+  .menu {
+    a {
+      font-size: 14px;
+    }
+  }
+
+  @include respond(0, $mobile) {
+    .account-logout {
+      display: none;
+    }
   }
 
   li {
     &:not(:last-child) {
       margin-right: 22px;
     }
+  }
+}
+
+ul.menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+
+  @include respond($laptop) {
+    transform: translateX(-58px);
   }
 
   svg {
@@ -503,7 +652,6 @@ ul.menu {
   }
 
   a {
-    font-size: 14px;
     text-decoration: none;
     font-family: myriad, sans-serif;
     color: $text-color;
@@ -545,9 +693,7 @@ ul.menu {
 }
 
 .account-logout {
-  @include respond(0, $mobile) {
-    display: none;
-  }
+
   font-family: myriad, sans-serif;
   background: $green;
   color: $white;
