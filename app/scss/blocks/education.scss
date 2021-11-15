@@ -79,7 +79,7 @@
 }
 
 .table-cell-black {
-  background: $table-color-dark;
+  background: $black;
 }
 
 .train-link {
@@ -189,11 +189,11 @@
       }
 
       .table-cell:nth-child(5) {
-        background: $table-color-dark;
+        background: $black;
       }
 
       .table-cell:nth-child(6) {
-        background: $table-color-red;
+        background: $red;
       }
 
     }
@@ -251,7 +251,7 @@
 }
 
 .item-black .education-title {
-  background: $table-color-dark;
+  background: $black;
 }
 
 .education-item {
@@ -265,7 +265,7 @@
 }
 
 .item-red .education-title {
-  background: $table-color-red;
+  background: $red;
 }
 
 .item-green .education-title {

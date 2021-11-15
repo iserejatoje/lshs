@@ -1,0 +1,138 @@
+.mark-green {
+  path {
+    fill: $green;
+  }
+}
+
+.mark {
+  margin-right: 5px;
+}
+
+.mark-yellow {
+  path {
+    fill: $yellow;
+  }
+}
+
+.mark-black {
+  path {
+    fill: $black;
+  }
+}
+
+.mark-white {
+  path {
+    fill: $table-color-gray;
+  }
+}
+
+.mark-red {
+  path {
+    fill: $red;
+  }
+}
+
+.special-block {
+  background: $asphalt;
+  border-radius: 10px;
+  font-size: 13px;
+  padding: 25px 30px;
+  max-width: 620px;
+  position: relative;
+  color: $gray;
+
+  b,
+  strong {
+    line-height: 1.692;
+    max-width: 450px;
+    color: #34314b;
+    display: block;
+  }
+
+  .icon {
+    position: absolute;
+    right: 30px;
+    top: 32px;
+    pointer-events: none;
+
+    @include respond(0, 600px) {
+      display: none;
+    }
+  }
+
+  .items {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+
+    svg {
+      min-width: 19px;
+      height: 19px;
+      fill: $green;
+      margin-right: 9px;
+      display: block;
+      transform: translateY(1px);
+    }
+
+    .item {
+      display: flex;
+
+      &:not(:last-child) {
+        margin-bottom: 7px;
+      }
+    }
+  }
+
+}
+
+.fs-18 {
+  font-size: 18px;
+  line-height: 1.222;
+}
+
+.course-text {
+  font-size: 13px;
+  line-height: 1.7;
+  color: #7f7d8e;
+  max-width: 888px;
+  margin-bottom: 30px;
+}
+
+blockquote {
+  margin: 30px 0;
+  padding: 0 30px;
+  border-left: 2px solid $green;
+  max-width: 960px;
+}
+
+.asphalt-block {
+  background: $asphalt;
+  padding: 60px 0;
+  margin-top: 78px;
+
+  .block {
+    background: $white;
+    padding: 25px 30px;
+    border-radius: 6px;
+    box-shadow: 0 0 50px 0 rgba(52, 49, 75, 0.1);
+    margin: 38px 0;
+
+    ul {
+      padding-left: 16px;
+      font-size: 13px;
+      color: $gray;
+      margin-top: 19px;
+      max-width: 830px;
+
+      li {
+        &:not(:last-child) {
+          margin-bottom: 7px;
+        }
+      }
+    }
+  }
+
+  .fs-18 {
+    font-weight: bold;
+  }
+}

@@ -515,6 +515,7 @@ ul.menu {
 
 .burger {
   width: 25px;
+  min-width: 25px;
   margin-left: 25px;
 
   @include respond($mobile) {
