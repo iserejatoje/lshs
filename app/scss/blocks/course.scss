@@ -85,6 +85,36 @@
 
 }
 
+.listing-title {
+  margin-top: 40px;
+}
+
+.listing {
+  margin-top: 45px;
+
+  .item {
+    display: flex;
+    margin-bottom: 2px;
+    align-items: center;
+  }
+
+  .icon {
+    @include respond($mobile) {
+      min-width: 70px;
+      max-width: 70px;
+    }
+    @include respond(0, $mobile) {
+      min-width: 57px;
+      max-width: 57px;
+    }
+    width: 100%;
+  }
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
 .fs-18 {
   font-size: 18px;
   line-height: 1.222;
@@ -105,31 +135,94 @@ blockquote {
   max-width: 960px;
 }
 
-.asphalt-block {
+.exam-questions {
+  @include respond($mobile) {
+    padding: 70px 0 100px 0;
+  }
+  @include respond(0, $mobile) {
+    padding: 30px 0 50px 0;
+  }
   background: $asphalt;
-  padding: 60px 0;
-  margin-top: 78px;
 
-  .block {
-    background: $white;
+  .exam-questions-content {
+    padding-top: 10px;
+    max-width: 900px;
+
+    .fs-13 {
+      margin-top: 28px;
+    }
+  }
+}
+
+.course-navigation {
+
+  @include respond($mobile) {
+    padding: 76px 0;
+  }
+  @include respond(0, $mobile) {
+    padding: 35px 0 30px 0;
+  }
+
+  .navigation-description {
+    max-width: 440px;
+  }
+}
+
+.block {
+  background: $white;
+  border-radius: 6px;
+  box-shadow: 0 0 50px 0 rgba(52, 49, 75, 0.1);
+
+  @include respond($mobile) {
     padding: 25px 30px;
-    border-radius: 6px;
-    box-shadow: 0 0 50px 0 rgba(52, 49, 75, 0.1);
-    margin: 38px 0;
+  }
+  @include respond(0, $mobile) {
+    padding: 20px;
+  }
 
-    ul {
-      padding-left: 16px;
-      font-size: 13px;
-      color: $gray;
-      margin-top: 19px;
-      max-width: 830px;
+  &.small-margin {
+    margin: 0 0 25px 0;
+  }
 
-      li {
-        &:not(:last-child) {
-          margin-bottom: 7px;
-        }
+  &:not(.small-margin) {
+    @include respond($mobile) {
+      margin: 38px 0;
+    }
+    @include respond(0, $mobile) {
+      margin: 25px 0 30px 0;
+    }
+  }
+
+
+  .fs-18 {
+    margin-bottom: 20px;
+  }
+
+  ul {
+    padding-left: 16px;
+    font-size: 13px;
+    color: $gray;
+    margin-top: 19px;
+    max-width: 830px;
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 7px;
       }
     }
+  }
+}
+
+.asphalt-block {
+  background: $asphalt;
+
+  @include respond($mobile) {
+    padding: 60px 0;
+    margin-top: 78px;
+  }
+  @include respond(0, $mobile) {
+    padding: 40px 0 25px 0;
+    margin-top: 48px;
   }
 
   .fs-18 {

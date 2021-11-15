@@ -62,6 +62,10 @@ header {
     grid-column-gap: 1em;
   }
 
+  &.row-large-gap {
+    grid-column-gap: 2em;
+  }
+
 }
 
 .heading {
@@ -426,6 +430,12 @@ footer {
 .width-7-laptop {
   @include respond($mobile) {
     grid-column: span 7;
+  }
+}
+
+.width-6-laptop {
+  @include respond($mobile) {
+    grid-column: span 6;
   }
 }
 
